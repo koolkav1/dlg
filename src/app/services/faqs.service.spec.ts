@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AccordionService } from './accordion.service';
+import { FAQsService } from './faqs.service';
 
 describe('AccordionService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: AccordionService = TestBed.get(AccordionService);
+    const service: FAQsService = TestBed.get(FAQsService);
     expect(service).toBeTruthy();
   });
 });
