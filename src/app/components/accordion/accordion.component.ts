@@ -47,15 +47,16 @@ export class AccordionComponent implements OnInit {
 
   }
   toggleAccordian(event, index) {
-      const element = event.target;
-      element.classList.toggle('active');
-      if (this.data[index].isActive) {
+    const element = event.target;
+    element.classList.toggle('active');
+    if (this.data[index].isActive) {
         this.data[index].isActive = false;
       } else {
         this.data[index].isActive = true;
       }
-      const panel = element.nextElementSibling;
-      if (panel.style.maxHeight) {
+    const panel = element.nextElementSibling;
+    panel.classList.toggle('active');
+    if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
       } else {
         panel.style.maxHeight = panel.scrollHeight + 'px';

@@ -1,6 +1,10 @@
+<h1>HAVE A QUESTION? WE CAN HELP</h1>
 <div *ngFor="let item of data;let i = index;">
-    <button class="accordion" (click)="toggleAccordian($event, i)">Q{{item.id}} {{item.question}}</button>
-    <div class="panel" hide="!item.isActive">
-    <p> {{item.answer}} </p>
-  </div>
+    <button class="accordion" (click)="toggleAccordian($event, i)">
+      <span class="number">Q{{item.id}}</span>
+      {{item.question}}
+    </button>
+      <div class="panel" hide="!item.isActive">
+      <p> {{item.answer}} </p>
+    </div>
   </div>
