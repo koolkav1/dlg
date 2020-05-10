@@ -1,0 +1,100 @@
+
+@import 'responsive.mixin.scss';
+
+h1 {
+    font-size: 40px;
+    border-bottom: solid 16px;
+    @include screen('phone') {
+            font-size: 20px;
+            border-bottom: solid 8px;
+    }
+    @include screen('tablet-portrait') {
+        font-size: 24px;
+        border-bottom: solid 12px;
+    }
+    @include screen('tablet-landscape') {
+        font-size: 32px;
+        border-bottom: solid 12px;
+    }
+}
+.accordion {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 36px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    border-radius: 2px;
+    outline: none;
+    transition: 0.4s;
+    font-size: 20px;
+    border-bottom: solid 4px;
+    font-family: 'Oswald', sans-serif;
+    justify-content: center;
+    @include screen('phone') {
+        font-size: 12px;
+        }
+        @include screen('tablet-portrait') {
+            font-size: 16px;
+            
+        }
+    .number {
+        font-size: 36px;
+        margin-right: 20px;
+        pointer-events: none;
+        font-weight: 700;
+        @include screen('phone') {
+            font-size: 16px;
+            margin-right: 4px;
+            }
+        @include screen('tablet-portrait') {
+                font-size: 16px;  
+           }
+    }
+  
+}
+ button.accordion.active {
+    background-color: rgb(115, 119, 115);
+    border-bottom: none;
+   
+ }
+.accordion:after {
+    content: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' class='svg-rotate__icon' width='32px' height='24px' viewBox='0 0 357 357'%3E%3Cg id='add'%3E%3Cpath d='M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z'/%3E%3C/g%3E%3C/svg%3E");
+    color: #000;
+    background-color: yellow;
+    padding: 8px;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    @include screen('phone') {
+        content: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' class='svg-rotate__icon' width='20px' height='12px' viewBox='0 0 357 357'%3E%3Cg id='add'%3E%3Cpath d='M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+}
+
+.accordion.active:after {
+    content: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' class='svg-rotate__icon' width='32px' height='24px' transform='rotate(315)' viewBox='0 0 357 357'%3E%3Cg id='add'%3E%3Cpath d='M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z'/%3E%3C/g%3E%3C/svg%3E");
+    transition: max-height 0.5s ease-out;
+    @include screen('phone') {
+        content: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' class='svg-rotate__icon' width='20px' height='12px' transform='rotate(315)' viewBox='0 0 357 357'%3E%3Cg id='add'%3E%3Cpath d='M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+    
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    
+    p{
+        margin-left: 30px;
+        font-size: 16px;
+    }
+    
+}
+.panel.active {
+    border-bottom: solid 4px;
+}
+
