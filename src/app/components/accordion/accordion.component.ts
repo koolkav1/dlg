@@ -11,37 +11,6 @@ export class AccordionComponent implements OnInit {
   constructor(private faqService: FAQsService) {}
   data: IFAQ[];
 
-
-  // data: any =
-  //   [
-  //     {
-  //       'parentName': 'Parent One',
-  //       'childProperties':
-  //         [
-  //           { 'propertyName': 'Property One' },
-  //           { 'propertyName': 'Property Two' }
-  //         ]
-  //     },
-  //     {
-  //       'parentName': 'Parent Two',
-  //       'childProperties':
-  //         [
-  //           { 'propertyName': 'Property Three' },
-  //           { 'propertyName': 'Property Four' },
-  //           { 'propertyName': 'Property Five' },
-  //         ]
-  //     },
-  //     {
-  //       'parentName': 'Parent Three',
-  //       'childProperties':
-  //         [
-  //           { 'propertyName': 'Property Six' },
-  //           { 'propertyName': 'Property Seven' },
-  //           { 'propertyName': 'Property Eight' },
-  //         ]
-  //     }
-  //   ];
-
   ngOnInit() {
     this.faqService.getJson().subscribe(data => this.data = data);
 

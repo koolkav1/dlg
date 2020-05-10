@@ -22,4 +22,5 @@ describe('AccordionComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
